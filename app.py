@@ -44,11 +44,11 @@ def sendsms():
      url = "https://api.dialog.lk/sms/send"
      body= {
         "message": "Noob",
-        "password": "password123#",
+        "password": "3a75f4fccb40436acd8bdec0b3c0e63a",
         "sourceAddress": "777177",
         "deliveryStatusRequest": "1",
         "destinationAddresses": ["tel: 94765762513"],
-        "applicationId": "APP_041214"
+        "applicationId": "APP_041232"
      }
      headers = {"Content-type": "application/json"}
      r = requests.post(url, data=json.dumps(body), headers=headers)
