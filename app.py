@@ -47,7 +47,7 @@ def sendsms():
         "password": "password123#",
         "sourceAddress": "777177",
         "deliveryStatusRequest": "1",
-        "destinationAddresses": ["tel: 5762513"],
+        "destinationAddresses": ["tel: 94765762513"],
         "applicationId": "APP_041214"
      }
      headers = {"Content-type": "application/json"}
