@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/upload',methods=['GET', 'POST'])
 def upload():
     data = request.body.destinationAddress
-    print(data,file=sys.stderr)
+    print >> sys.stderr, data
     return render_template('index.html',data=data)
 
 if __name__ == "__main__":
