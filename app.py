@@ -8,7 +8,9 @@ import os
 app = Flask(__name__)
 @app.route('/upload')
 def upload():
-   return render_template('upload.html',copyright=0,illegal_content=0, success=0)
+    data = request.body
+    return data
+   # return render_template('upload.html',copyright=0,illegal_content=0, success=0)
 
 @app.route('/uploader', methods = ['GET', 'POST'])
 def uploader():
