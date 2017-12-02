@@ -4,12 +4,35 @@ from werkzeug import secure_filename
 import json
 import requests
 import os
+import pyrebase
 # from dejavu import Dejavu
 app = Flask(__name__)
 @app.route('/upload')
 def upload():
     data = request.body
-    return data
+    config = {
+    apiKey: "AIzaSyBpln_ctf_CW0rptTiuA8pjdOgkXJp3kIA",
+    authDomain: "noob-7d0ad.firebaseapp.com",
+    databaseURL: "https://noob-7d0ad.firebaseio.com",
+    projectId: "noob-7d0ad",
+    storageBucket: "noob-7d0ad.appspot.com",
+    messagingSenderId: "148481981302"
+  };
+  firebase = firebase.initializeApp(config);
+  auth = firebase.auth()
+
+  # Log the user in
+  user = auth.sign_in_with_email_and_password("ranapann1@gmail.com", "password")
+
+  # Get a reference to the database service
+  db = firebase.database()
+
+  # data to save
+  data = request.body
+
+# Pass the user's idToken to the push method
+  results = db.child("users").push(data, user['idToken'])
+
    # return render_template('upload.html',copyright=0,illegal_content=0, success=0)
 
 @app.route('/uploader', methods = ['GET', 'POST'])
