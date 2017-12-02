@@ -1,9 +1,9 @@
 from flask import Flask, request, render_template, redirect, url_for
-from dejavu.recognize import FileRecognizer, MicrophoneRecognizer
+# from dejavu.recognize import FileRecognizer, MicrophoneRecognizer
 from werkzeug import secure_filename
 import json
 import os
-from dejavu import Dejavu
+# from dejavu import Dejavu
 app = Flask(__name__)
 @app.route('/upload')
 def upload():
@@ -19,12 +19,12 @@ def uploader():
 
  # You should use os.path.join here too.
 
- with open("dejavu.cnf.SAMPLE") as f:
-  config = json.load(f)
- djv = Dejavu(config)
- song = djv.recognize(FileRecognizer, "temp/"+filename)
- path = "temp/"+filename
- os.remove(path)
+ # with open("dejavu.cnf.SAMPLE") as f:
+ #  config = json.load(f)
+ # djv = Dejavu(config)
+ # song = djv.recognize(FileRecognizer, "temp/"+filename)
+ # path = "temp/"+filename
+ # os.remove(path)
  if(song['confidence'] < 50):
      copyright = 0
      success = 1
