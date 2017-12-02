@@ -8,8 +8,9 @@ import sys
 app = Flask(__name__)
 @app.route('/upload',methods=['GET', 'POST'])
 def upload():
-    data = request.body.destinationAddress
-    print >> sys.stderr, data
+    data = request.data
+    dataDict = json.loads(data)
+    print >> sys.stderr, dataDict
     return render_template('index.html',data=data)
 
 if __name__ == "__main__":
