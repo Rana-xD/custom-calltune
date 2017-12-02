@@ -58,11 +58,11 @@ def upload():
             illegal_content = 0
             return render_template('upload.html',copyright=0,illegal_content=0,success=1)
 
-    else:
-        copyright = 1
-        success = 0
-        illegal_content = 0
-        return render_template('upload.html',copyright=1,illegal_content=0,success=0)
+        # else:
+        # copyright = 1
+        # success = 0
+        # illegal_content = 0
+        # return render_template('upload.html',copyright=1,illegal_content=0,success=0)
 
     @app.route('/sendsms')
     def sendsms():
