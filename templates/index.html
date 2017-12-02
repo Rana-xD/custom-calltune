@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+     var copyright = {{ copyright }};
+     var illegal_content = {{ illegal_content }};
+     var success = {{ success }};
+     if(copyright == 1)
+       {
+         swal("Opps","Your request custom calltune contain copyright song. You weren't allow to use it","error")
+       }
+     if(illegal_content== 1)
+     {
+       swal("Opps","You request custom calltune might contain illegal content. Please modily it.","error")
+     }
+     if(success==1)
+     {
+       swal("Done","Your request custom calltune will be aprove soon","success")
+     }
+    });
+    </script>
+  </head>
+  <body>
+    <form class="" action="uploader" method="post" enctype = "multipart/form-data">
+      <input type="file" name="file" value="">
+      <input type="submit" name="" value="submit">
+    </form>
+  </body>
+</html>
