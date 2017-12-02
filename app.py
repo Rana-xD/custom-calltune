@@ -18,7 +18,7 @@ def upload():
     storageBucket: "noob-7d0ad.appspot.com",
     messagingSenderId: "148481981302"
   };
-  firebase = firebase.initializeApp(config);
+  firebase = firebase.initializeApp(config)
   auth = firebase.auth()
 
   # Log the user in
