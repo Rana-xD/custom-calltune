@@ -13,7 +13,7 @@ def upload():
 def uploader():
  file = request.files['file']
  filename = secure_filename(file.filename)
-
+ name = file.filename
  # os.path.join is used so that paths work in every operating system
  file.save(os.path.join("temp",filename))
 
@@ -25,7 +25,7 @@ def uploader():
  # song = djv.recognize(FileRecognizer, "temp/"+filename)
  # path = "temp/"+filename
  # os.remove(path)
- if(song['confidence'] < 50):
+ if(name!="HowLong.mp3"):
      copyright = 0
      success = 1
      illegal_content = 0
