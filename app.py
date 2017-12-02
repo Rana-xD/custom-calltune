@@ -15,7 +15,7 @@ def uploader():
  filename = secure_filename(file.filename)
  name = file.filename
  # os.path.join is used so that paths work in every operating system
- file.save(os.path.join("temp",filename))
+ # file.save(os.path.join("temp",filename))
 
  # You should use os.path.join here too.
 
