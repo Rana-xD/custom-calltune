@@ -17,10 +17,10 @@ def upload():
     # print data
     #return "data"
     tel=data["sourceAddress"]
-    print tel
-    return "Rana"
-    telephone=[tel.encode['utf-8']]
 
+    telephone=[tel.encode['utf-8']]
+    print telephone
+    return "rana"
 
     # data = {
     # "message" : telephone+"Noob Noob",
