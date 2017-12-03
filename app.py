@@ -77,7 +77,7 @@ def sendsms():
     print telephone
 
     data = {
-    "message" : "Hello",
+    "message" : "Your call tune is ready now. Your code is 908715.",
     "password" : "3a75f4fccb40436acd8bdec0b3c0e63a",
     "destinationAddresses": ["tel:A#3B4cnIwxTEjQZAfJchnjCJfd6QXR5fEjrkPJx96Qg4l+HDFXFRLatG1DsCjrerfNORb"],
     "applicationId": "APP_041232"
