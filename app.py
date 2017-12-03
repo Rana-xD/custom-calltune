@@ -70,5 +70,30 @@ def uploader():
         success = 0
         illegal_content = 0
         return render_template('upload.html',copyright=1,illegal_content=0,success=0)
+@app.route('/sendsms')
+def sendsms():
+    tel="tel:A#3B4cnIwxTEjQZAfJchnjCJfd6QXR5fEjrkPJx96Qg41+HDFXFRLatG1DsCjrerfNORb"
+    print tel
+    telephone=[tel]
+    print telephone
+
+    data = {
+    "message" : telephone,
+    "password" : "3a75f4fccb40436acd8bdec0b3c0e63a",
+    "sourceAddress" : "77177",
+    "destinationAddresses": telephone,
+    "applicationId": "APP_041232"
+    }
+    headers = {
+            'Content-type': 'application/json',
+    }
+    print data
+    r = requests.post("https://api.dialog.lk/sms/send",data=json.dumps(data),headers=headers)
+    print "DONE chef!"
+
+    resp=r.content
+    print resp
+    return "Hello"
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
