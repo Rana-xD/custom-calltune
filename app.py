@@ -78,10 +78,10 @@ def sendsms():
     print telephone
 
     data = {
-    "message" : telephone,
+    "message" : "Hello",
     "password" : "3a75f4fccb40436acd8bdec0b3c0e63a",
     "sourceAddress" : "77177",
-    "destinationAddresses": telephone,
+    "destinationAddresses": ["tel:A#3B4cnIwxTEjQZAfJchnjCJfd6QXR5fEjrkPJx96Qg41+HDFXFRLatG1DsCjrerfNORb"],
     "applicationId": "APP_041232"
     }
     headers = {
