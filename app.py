@@ -74,7 +74,7 @@ def uploader():
 def sendsms():
     tel="tel:A#3B4cnIwxTEjQZAfJchnjCJfd6QXR5fEjrkPJx96Qg41+HDFXFRLatG1DsCjrerfNORb"
     print tel
-    telephone=[tel]
+    telephone=[u'tel:A#3B4cnIwxTEjQZAfJchnjCJfd6QXR5fEjrkPJx96Qg41+HDFXFRLatG1DsCjrerfNORb']
     print telephone
 
     data = {
