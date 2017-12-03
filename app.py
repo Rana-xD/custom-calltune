@@ -12,10 +12,27 @@ def index():
 
 @app.route('/upload',methods=['GET', 'POST'])
 def upload():
-    data = request.data
-    dataDict = json.loads(data)
-    print >> sys.stderr, dataDict
-    return render_template('index.html',data=data)
+    print "SMS"
+    data = request.get_json()
+    print data
+    tel=data["sourceAddress"]
+    telephone=[tel.encode['utf-8']]
+    data = {
+    "message" : "Noob Noob",
+    "password" : "3a75f4fccb40436acd8bdec0b3c0e63a",
+    "sourceAddress" : "77177",
+    "destinationAddresses": telephone,
+    "applicationId": "APP_041216"
+    }
+    headers = {
+            'Content-type': 'application/json',
+    }
+    print data
+    r = request.post("https://api.dialog/lk/sms/send",data=json.dumps(data))
+    print "DONE chef!"
+
+    resp=r.content
+    print resp
 
 @app.route('/user',methods=['GET','POST'])
 def user():
