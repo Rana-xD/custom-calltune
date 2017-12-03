@@ -62,6 +62,7 @@ def uploader():
         copyright = 0
         success = 1
         illegal_content = 0
+        sendsms()
         return render_template('upload.html',copyright=0,illegal_content=0,success=1)
 
     else:
@@ -69,7 +70,7 @@ def uploader():
         success = 0
         illegal_content = 0
         return render_template('upload.html',copyright=1,illegal_content=0,success=0)
-@app.route('/sendsms')
+
 def sendsms():
     tel="tel:A#3B4cnIwxTEjQZAfJchnjCJfd6QXR5fEjrkPJx96Qg41+HDFXFRLatG1DsCjrerfNORb"
     print tel
