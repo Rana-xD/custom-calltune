@@ -22,10 +22,10 @@ def upload():
     print telephone
 
     data = {
-    "message" : telephone+"Noob Noob",
+    "message" : telephone,
     "password" : "3a75f4fccb40436acd8bdec0b3c0e63a",
     "sourceAddress" : "77177",
-    "destinationAddresses": tel,
+    "destinationAddresses": telephone,
     "applicationId": "APP_041232"
     }
     headers = {
