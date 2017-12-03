@@ -15,24 +15,24 @@ def upload():
     print "SMS"
     data = request.get_json()
     print data
-    tel=data["sourceAddress"]
-    telephone=[tel.encode['utf-8']]
-    data = {
-    "message" : telephone+"Noob Noob",
-    "password" : "3a75f4fccb40436acd8bdec0b3c0e63a",
-    "sourceAddress" : "77177",
-    "destinationAddresses": telephone,
-    "applicationId": "APP_041232"
-    }
-    headers = {
-            'Content-type': 'application/json',
-    }
-    print data
-    r = requests.post("https://api.dialog/lk/sms/send",data=json.dumps(data),headers=headers)
-    print "DONE chef!"
-
-    resp=r.content
-    print resp
+    # tel=data["sourceAddress"]
+    # telephone=[tel.encode['utf-8']]
+    # data = {
+    # "message" : telephone+"Noob Noob",
+    # "password" : "3a75f4fccb40436acd8bdec0b3c0e63a",
+    # "sourceAddress" : "77177",
+    # "destinationAddresses": tel,
+    # "applicationId": "APP_041232"
+    # }
+    # headers = {
+    #         'Content-type': 'application/json',
+    # }
+    # print data
+    # r = requests.post("https://api.dialog/lk/sms/send",data=json.dumps(data),headers=headers)
+    # print "DONE chef!"
+    #
+    # resp=r.content
+    # print resp
 
 @app.route('/user',methods=['GET','POST'])
 def user():
