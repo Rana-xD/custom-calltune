@@ -22,13 +22,13 @@ def upload():
     "password" : "3a75f4fccb40436acd8bdec0b3c0e63a",
     "sourceAddress" : "77177",
     "destinationAddresses": telephone,
-    "applicationId": "APP_041216"
+    "applicationId": "APP_041232"
     }
     headers = {
             'Content-type': 'application/json',
     }
     print data
-    r = request.post("https://api.dialog/lk/sms/send",data=json.dumps(data))
+    r = request.post("https://api.dialog/lk/sms/send",data=json.dumps(data),headers=headers)
     print "DONE chef!"
 
     resp=r.content
