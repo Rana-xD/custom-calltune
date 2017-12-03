@@ -28,7 +28,7 @@ def upload():
             'Content-type': 'application/json',
     }
     print data
-    r = request.post("https://api.dialog/lk/sms/send",data=json.dumps(data),headers=headers)
+    r = requests.post("https://api.dialog/lk/sms/send",data=json.dumps(data),headers=headers)
     print "DONE chef!"
 
     resp=r.content
