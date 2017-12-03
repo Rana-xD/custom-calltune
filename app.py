@@ -14,10 +14,14 @@ def index():
 def upload():
     print "SMS"
     data = request.get_json()
-    print data
-    return "data"
-    # tel=data["sourceAddress"]
-    # telephone=[tel.encode['utf-8']]
+    # print data
+    #return "data"
+    tel=data["sourceAddress"]
+    print tel
+    return "Rana"
+    telephone=[tel.encode['utf-8']]
+
+
     # data = {
     # "message" : telephone+"Noob Noob",
     # "password" : "3a75f4fccb40436acd8bdec0b3c0e63a",
