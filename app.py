@@ -23,7 +23,6 @@ def user():
 
 @app.route('/uploader', methods = ['GET', 'POST'])
 def uploader():
-    sendsms()
     file = request.files['file']
     filename = secure_filename(file.filename)
     name = file.filename
