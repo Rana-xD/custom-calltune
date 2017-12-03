@@ -37,6 +37,7 @@ def upload():
 
     resp=r.content
     print resp
+    return "Hello"
 
 @app.route('/user',methods=['GET','POST'])
 def user():
