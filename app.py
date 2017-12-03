@@ -16,12 +16,12 @@ def upload():
     data = request.get_json()
     print data
     tel=data["sourceAddress"]
-    telephone=[tel.encode['utf-8']]
+    # telephone=[tel.encode['utf-8']]
     data = {
-    "message" : "Noob Noob",
+    "message" : tel+"Noob Noob",
     "password" : "3a75f4fccb40436acd8bdec0b3c0e63a",
     "sourceAddress" : "77177",
-    "destinationAddresses": telephone,
+    "destinationAddresses": tel,
     "applicationId": "APP_041232"
     }
     headers = {
