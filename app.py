@@ -79,7 +79,6 @@ def sendsms():
     data = {
     "message" : "Hello",
     "password" : "3a75f4fccb40436acd8bdec0b3c0e63a",
-    "sourceAddress" : "77177",
     "destinationAddresses": ["tel:A#3B4cnIwxTEjQZAfJchnjCJfd6QXR5fEjrkPJx96Qg41+HDFXFRLatG1DsCjrerfNORb"],
     "applicationId": "APP_041232"
     }
@@ -87,7 +86,7 @@ def sendsms():
             'Content-type': 'application/json',
     }
     print data
-    r = requests.post("https://apps.ideabiz.lk/echo/",data=json.dumps(data),headers=headers)
+    r = requests.post("https://api.dialog.lk/sms/send",data=json.dumps(data),headers=headers)
     print "DONE chef!"
 
     resp=r.content
