@@ -15,7 +15,7 @@ def upload():
     print "SMS"
     data = request.get_json()
     print data
-    return data
+    return "data"
     # tel=data["sourceAddress"]
     # telephone=[tel.encode['utf-8']]
     # data = {
