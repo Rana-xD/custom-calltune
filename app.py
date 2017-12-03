@@ -17,8 +17,8 @@ def upload():
     # print data
     #return "data"
     tel=data["sourceAddress"]
-
-    telephone=[tel.encode['utf-8']]
+    print tel
+    telephone=[tel]
     print telephone
     return "rana"
 
