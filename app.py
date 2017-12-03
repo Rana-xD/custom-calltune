@@ -79,7 +79,7 @@ def sendsms():
     data = {
     "message" : "Hello",
     "password" : "3a75f4fccb40436acd8bdec0b3c0e63a",
-    "destinationAddresses": ["tel:A#3B4cnIwxTEjQZAfJchnjCJfd6QXR5fEjrkPJx96Qg41+HDFXFRLatG1DsCjrerfNORb"],
+    "destinationAddresses": ["tel:A#3B4cnIwxTEjQZAfJchnjCJfd6QXR5fEjrkPJx96Qg4l+HDFXFRLatG1DsCjrerfNORb"],
     "applicationId": "APP_041232"
     }
     headers = {
